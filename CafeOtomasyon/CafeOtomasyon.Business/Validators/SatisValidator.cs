@@ -1,6 +1,5 @@
 ﻿using CafeOtomasyon.Entity.Concrete;
 using FluentValidation;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.Business.Validators
 {
-    public class KullaniciHaretiValidator : AbstractValidator<KullaniciHareketi>
+    public class SatisValidator : AbstractValidator<Satis>
     {
-        public KullaniciHaretiValidator()
+        public SatisValidator()
         {
-
             RuleFor(x => x.Aciklama)
                 .MaximumLength(300)
-                .WithMessage("Aciklama maksimum 300 karakter olabilir");
+                .WithMessage("Açıklama 300 karakterden fazla olamaz");
 
+            RuleFor(x => x.SatisKodu)
+                .MaximumLength(50)
+                .WithMessage("Satis kodu 50 karakterden fazla olamaz");
         }
     }
 }

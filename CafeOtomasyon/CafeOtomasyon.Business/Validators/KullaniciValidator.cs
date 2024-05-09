@@ -53,6 +53,10 @@ namespace CafeOtomasyon.Business.Validators
                 .EmailAddress()
                 .WithMessage("Lütfen geçerli email adresi giriniz.");
 
+            RuleFor(x => x.Aciklama)
+                .MaximumLength(300)
+                .WithMessage("Aciklama maksimum 300 karakter olabilir");
+
 
         }
     }

@@ -18,6 +18,10 @@ namespace CafeOtomasyon.Business.Validators
                 .WithMessage("Masa adı alanı boş geçilemez.")
                 .MaximumLength(15)
                 .WithMessage("Masa adı 15 karakterden büyük olamaz");
+
+            RuleFor(x => x.Aciklama)
+                .MaximumLength(300)
+                .WithMessage("Aciklama maksimum 300 karakter olabilir");
         }
     }
 }

@@ -33,6 +33,10 @@ namespace CafeOtomasyon.Business.Validators
                 .GreaterThanOrEqualTo(1)
                 .WithMessage("Birim fiyatı alanı 1 veya daha büyük değer olmalı.");
 
+            RuleFor(x => x.Aciklama)
+                .MaximumLength(300)
+                .WithMessage("Aciklama maksimum 300 karakter olabilir");
+
         }
     }
 }
