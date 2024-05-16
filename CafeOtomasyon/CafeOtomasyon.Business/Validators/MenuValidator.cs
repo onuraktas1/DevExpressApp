@@ -17,7 +17,8 @@ namespace CafeOtomasyon.Business.Validators
                 .NotNull()
                 .WithMessage("Menu adı boş geçilemez.")
                 .MaximumLength(75)
-                .WithMessage("Menu adı 75 karakterden büyük olamaz");
+                .MinimumLength(2)
+                .WithMessage("Menu adı 2-75 karakter aralığında olmalı");
 
             RuleFor(x => x.Aciklama)
                 .MaximumLength(300)

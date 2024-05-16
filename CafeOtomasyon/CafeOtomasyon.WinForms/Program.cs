@@ -10,6 +10,7 @@ namespace CafeOtomasyon.WinForms
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            
 
         }
     }
