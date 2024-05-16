@@ -1,5 +1,7 @@
+using CafeOtomasyon.Business.Concrete;
 using CafeOtomasyon.Business.Tools;
 using CafeOtomasyon.Business.Validators;
+using CafeOtomasyon.DAL.Concrete.EntityFramework;
 using CafeOtomasyon.Entity.Abstract;
 using CafeOtomasyon.Entity.Concrete;
 using FluentValidation.Results;
@@ -8,6 +10,7 @@ namespace CafeOtomasyon.WinForms
 {
     public partial class Form1 : Form
     {
+        MenuManager _menuManager = new(new EfMenuRepository());
         public Form1()
         {
             InitializeComponent();
@@ -17,7 +20,7 @@ namespace CafeOtomasyon.WinForms
         {
             Menu m = new();
             m.MenuAdi = textBox1.Text;
-
+            m.Aciklama = textBox1.Text;
             bool ValidationResult = ValidatorTools.Validates(new MenuValidator(), m, out string erorMessage);
             if (!ValidationResult)
             {
@@ -25,7 +28,7 @@ namespace CafeOtomasyon.WinForms
             }
             else
             {
-
+                _menuManager.Add(m);
             }
         }
     }

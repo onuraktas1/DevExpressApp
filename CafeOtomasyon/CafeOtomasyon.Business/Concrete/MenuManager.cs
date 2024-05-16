@@ -43,11 +43,6 @@ namespace CafeOtomasyon.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void Save(Menu context)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update(Menu entity)
         {
             throw new NotImplementedException();

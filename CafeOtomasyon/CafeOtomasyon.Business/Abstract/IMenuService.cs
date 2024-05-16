@@ -13,11 +13,6 @@ namespace CafeOtomasyon.Business.Abstract
 {
     public interface IMenuService : IGenericService<Menu>
     {
-        //List<Menu> GetAll(Expression<Func<Menu, bool>> filter = null);
-        //Menu GetByFilter(Expression<Func<Menu, bool>> filter);
-        //void Add(Menu entity);
-        //void Update(Menu entity);
-        //void Delete(Expression<Func<Menu, bool>> filter);
-        //void Save(Menu context);
+
     }
 }

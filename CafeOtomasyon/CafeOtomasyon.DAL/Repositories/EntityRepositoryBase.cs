@@ -18,11 +18,13 @@ namespace CafeOtomasyon.DAL.Repositories
         public void Add(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
+            Save();
         }
 
         public void Delete(Expression<Func<TEntity, bool>> filter)
         {
             _context.Set<TEntity>().Remove(_context.Set<TEntity>().FirstOrDefault(filter));
+            Save();
         }
 
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
@@ -43,6 +45,7 @@ namespace CafeOtomasyon.DAL.Repositories
         public void Update(TEntity entity)
         {
             _context.Set<TEntity>().Update(entity);
+            Save();
         }
     }
 }
