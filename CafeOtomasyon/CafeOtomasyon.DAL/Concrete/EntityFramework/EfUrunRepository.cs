@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.DAL.Concrete.EntityFramework
 {
-    public class EfUrunRepository : EntityRepositoryBase<Context, Urun>, IUrunDal
+    public class EfUrunRepository : EntityRepositoryBase<Urun>, IUrunDal
     {
     }
 }

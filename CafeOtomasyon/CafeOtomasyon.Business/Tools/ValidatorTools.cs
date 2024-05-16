@@ -28,7 +28,9 @@ namespace CafeOtomasyon.Business.Tools
                 result = false;
                 errorMessage = message;
             }
+            else
             errorMessage = string.Empty;
+
             return result;
         }
     }

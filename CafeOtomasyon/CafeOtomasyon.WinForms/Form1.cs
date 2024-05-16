@@ -1,4 +1,6 @@
+using CafeOtomasyon.Business.Tools;
 using CafeOtomasyon.Business.Validators;
+using CafeOtomasyon.Entity.Abstract;
 using CafeOtomasyon.Entity.Concrete;
 using FluentValidation.Results;
 
@@ -15,18 +17,15 @@ namespace CafeOtomasyon.WinForms
         {
             Menu m = new();
             m.MenuAdi = textBox1.Text;
-            MenuValidator validationRules = new MenuValidator();
-            ValidationResult results = validationRules.Validate(m);
-            if (results.IsValid)
-            {
 
+            bool ValidationResult = ValidatorTools.Validates(new MenuValidator(), m, out string erorMessage);
+            if (!ValidationResult)
+            {
+                MessageBox.Show(erorMessage);
             }
             else
             {
-                foreach (var item in results.Errors)
-                {
 
-                }
             }
         }
     }

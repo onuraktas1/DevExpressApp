@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.DAL.Concrete.EntityFramework
 {
-    public class EfRolRepository : EntityRepositoryBase<Context, Rol>, IRolDal
+    public class EfRolRepository : EntityRepositoryBase<Rol>, IRolDal
     {
     }
 }

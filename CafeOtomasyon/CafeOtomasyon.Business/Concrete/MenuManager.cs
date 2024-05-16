@@ -1,9 +1,11 @@
 ﻿using CafeOtomasyon.Business.Abstract;
 using CafeOtomasyon.Business.Tools;
+using CafeOtomasyon.Business.Validators;
 using CafeOtomasyon.DAL.Abstract;
 using CafeOtomasyon.DAL.Concrete;
 using CafeOtomasyon.Entity.Abstract;
 using CafeOtomasyon.Entity.Concrete;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace CafeOtomasyon.Business.Concrete
     public class MenuManager : IMenuService
     {
         IMenuDal _menuDal;
-        Context context = new();
         public MenuManager(IMenuDal menuDal)
         {
             _menuDal = menuDal;
@@ -24,8 +25,7 @@ namespace CafeOtomasyon.Business.Concrete
 
         public void Add(Menu entity)
         {
-            //ValidatorTools.Validates()
-            _menuDal.Add(context, entity);
+            _menuDal.Add(entity);
         }
 
         public void Delete(Expression<Func<Menu, bool>> filter)

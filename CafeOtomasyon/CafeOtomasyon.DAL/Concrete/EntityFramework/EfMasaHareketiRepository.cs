@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.DAL.Concrete.EntityFramework
 {
-    public class EfMasaHareketiRepository : EntityRepositoryBase<Context, MasaHareketi>, IMasaHareketiDal
+    public class EfMasaHareketiRepository : EntityRepositoryBase<MasaHareketi>, IMasaHareketiDal
     {
     }
 }

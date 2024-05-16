@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.DAL.Concrete.EntityFramework
 {
-    public class EfKullaniciRepository : EntityRepositoryBase<Context, Kullanici>, IKullaniciDal
+    public class EfKullaniciRepository : EntityRepositoryBase<Kullanici>, IKullaniciDal
     {
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyon.DAL.Abstract
 {
-    public interface IMasaHareketiDal : IEntityRepository<Context, MasaHareketi>
+    public interface IMasaHareketiDal : IEntityRepository<MasaHareketi>
     {
     }
 }
