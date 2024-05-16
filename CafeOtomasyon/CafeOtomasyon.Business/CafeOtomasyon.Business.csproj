@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CafeOtomasyon.DAL\CafeOtomasyon.DAL.csproj" />
     <ProjectReference Include="..\CafeOtomasyon.Entity\CafeOtomasyon.Entity.csproj" />
   </ItemGroup>
 
