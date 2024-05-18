@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace CafeOtomasyon.DAL.Repositories
 {
     public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity>
-        where TEntity : class, new()
+        where TEntity : class , new()
     {
         Context _context = new();
         public void Add(TEntity entity)
