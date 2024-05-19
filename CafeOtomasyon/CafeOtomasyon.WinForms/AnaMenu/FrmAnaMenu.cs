@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraBars;
+﻿using CafeOtomasyon.WinForms.Urunler;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,18 @@ namespace CafeOtomasyon.WinForms.AnaMenu
         public FrmAnaMenu()
         {
             InitializeComponent();
+        }
+
+        void FormGetir(XtraForm form)
+        {
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnUrunler_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmUrunler frmUrunler = new();
+            FormGetir(frmUrunler);
         }
     }
 }
