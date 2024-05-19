@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpress.Win.Design" Version="23.2.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,6 +18,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CafeOtomasyon.Business\CafeOtomasyon.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Menuler\" />
+    <Folder Include="Masalar\" />
+    <Folder Include="Kullanicilar\" />
+    <Folder Include="Urunler\" />
   </ItemGroup>
 
 </Project>

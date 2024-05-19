@@ -12,6 +12,8 @@ namespace CafeOtomasyon.Entity.Concrete
         public int Id { get; set; }
         public string SatisKodu { get; set; }
         public int MasaId { get; set; }
+        public int MenuId { get; set; }
+        public int UrunId { get; set; }
         public int Miktar { get; set; }
         public decimal BirimFiyati { get; set; }
         public string Aciklama { get; set; }

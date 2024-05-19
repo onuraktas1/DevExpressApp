@@ -1,6 +1,4 @@
-using CafeOtomasyon.WinForms.AnaMenu;
-
-namespace CafeOtomasyon.WinForms
+namespace DevExpressDeneme
 {
     internal static class Program
     {
@@ -10,9 +8,10 @@ namespace CafeOtomasyon.WinForms
         [STAThread]
         static void Main()
         {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmAnaMenu());
-            
+            Application.Run(new Form1());
         }
     }
 }
