@@ -35,12 +35,17 @@ namespace CafeOtomasyon.Business.Concrete
 
         public List<Menu> GetAll(Expression<Func<Menu, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            return _menuDal.GetAll(filter);
         }
 
         public Menu GetByFilter(Expression<Func<Menu, bool>> filter)
         {
             throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            _menuDal.Save();
         }
 
         public void Update(Menu entity)

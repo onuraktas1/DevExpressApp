@@ -15,5 +15,6 @@ namespace CafeOtomasyon.Business.Abstract
         void Add(T entity);
         void Update(T entity);
         void Delete(Expression<Func<T, bool>> filter);
+        public void Save();
     }
 }

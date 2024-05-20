@@ -1,4 +1,5 @@
-﻿using CafeOtomasyon.WinForms.Urunler;
+﻿using CafeOtomasyon.WinForms.Menuler;
+using CafeOtomasyon.WinForms.Urunler;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using System;
@@ -30,6 +31,12 @@ namespace CafeOtomasyon.WinForms.AnaMenu
         {
             FrmUrunler frmUrunler = new();
             FormGetir(frmUrunler);
+        }
+
+        private void btnMenuler_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmMenuler frmMenuler = new();
+            frmMenuler.ShowDialog();
         }
     }
 }
