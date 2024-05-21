@@ -20,6 +20,7 @@ namespace CafeOtomasyon.DAL.Mapping
             builder.Property(x => x.Aciklama).HasColumnType("varchar").HasMaxLength(300);
             builder.Property(x => x.BirimFiyati1).HasPrecision(28, 2);
             builder.Property(x => x.BirimFiyati2).HasPrecision(28, 2);
+            builder.Property(x => x.BirimFiyati3).HasPrecision(28, 2);
             builder.HasOne(x => x.Menu).WithMany(x => x.Urun).HasForeignKey(x => x.MenuId).IsRequired();
 
         }

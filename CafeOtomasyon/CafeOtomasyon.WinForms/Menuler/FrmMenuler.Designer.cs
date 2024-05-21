@@ -41,11 +41,13 @@
             Aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             gridControl1 = new DevExpress.XtraGrid.GridControl();
             menuManagerBindingSource = new BindingSource(components);
+            gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
             SuspendLayout();
             // 
             // labelControl1
@@ -82,6 +84,7 @@
             btnKapat.Size = new Size(113, 55);
             btnKapat.TabIndex = 0;
             btnKapat.Text = "Kapat";
+            btnKapat.Click += btnKapat_Click;
             // 
             // btnSil
             // 
@@ -91,6 +94,7 @@
             btnSil.Size = new Size(113, 55);
             btnSil.TabIndex = 0;
             btnSil.Text = "Sil";
+            btnSil.Click += btnSil_Click;
             // 
             // btnKaydet
             // 
@@ -142,11 +146,12 @@
             gridControl1.Name = "gridControl1";
             gridControl1.Size = new Size(644, 463);
             gridControl1.TabIndex = 2;
-            gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
+            gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1, gridView2 });
             // 
-            // menuManagerBindingSource
+            // gridView2
             // 
-            menuManagerBindingSource.DataSource = typeof(Business.Concrete.MenuManager);
+            gridView2.GridControl = gridControl1;
+            gridView2.Name = "gridView2";
             // 
             // FrmMenuler
             // 
@@ -167,6 +172,7 @@
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -183,5 +189,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Columns.GridColumn MenuAdı;
         private DevExpress.XtraGrid.Columns.GridColumn Aciklama;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

@@ -30,7 +30,7 @@ namespace CafeOtomasyon.Business.Concrete
 
         public void Delete(Expression<Func<Menu, bool>> filter)
         {
-            throw new NotImplementedException();
+            _menuDal.Delete(filter);
         }
 
         public List<Menu> GetAll(Expression<Func<Menu, bool>> filter = null)

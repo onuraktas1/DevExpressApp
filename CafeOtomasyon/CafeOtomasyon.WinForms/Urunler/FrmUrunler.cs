@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using CafeOtomasyon.DAL.Concrete;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace CafeOtomasyon.WinForms.Urunler
 {
     public partial class FrmUrunler : DevExpress.XtraEditors.XtraForm
     {
+        private readonly Context _context = new();
         public FrmUrunler()
         {
             InitializeComponent();

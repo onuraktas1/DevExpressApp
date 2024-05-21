@@ -1,34 +1,49 @@
 ﻿using CafeOtomasyon.Business.Concrete;
 using CafeOtomasyon.DAL.Concrete;
 using CafeOtomasyon.DAL.Concrete.EntityFramework;
-using DevExpress.XtraEditors;
+using CafeOtomasyon.Entity.Concrete;
+using DevExpress.XtraGrid.Columns;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+using System.Windows.Controls;
 namespace CafeOtomasyon.WinForms.Menuler
 {
     public partial class FrmMenuler : DevExpress.XtraEditors.XtraForm
     {
-        MenuManager _menuManager = new(new EfMenuRepository());
+        private readonly Context _context = new Context();
+
         public FrmMenuler()
         {
             InitializeComponent();
-            gridControl1.DataSource = _menuManager.GetAll();
+            _context.Menuler.Load();
+            gridControl1.DataSource = _context.Menuler.Local.ToBindingList();
 
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            _menuManager.Save();
+            _context.SaveChanges();
             gridView1.RefreshData();
+
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            bool silinsinMi = MessageBox.Show(
+                text: "Seçili olan menü silinsin mi ?",
+                caption: "Uyarı", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes;
+
+            if (silinsinMi)
+            {
+                gridView1.DeleteSelectedRows();
+                _context.SaveChanges();
+            }
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

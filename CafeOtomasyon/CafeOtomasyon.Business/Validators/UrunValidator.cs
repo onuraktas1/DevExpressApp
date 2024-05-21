@@ -44,6 +44,13 @@ namespace CafeOtomasyon.Business.Validators
                 .GreaterThanOrEqualTo(1)
                 .WithMessage("Birim fiyatı2 1 veya daha fazla olmalıdır.");
 
+            RuleFor(x => x.BirimFiyati3)
+                .NotEmpty()
+                .NotNull()
+                .WithMessage("Birim fiyatı2 girilmesi zorunludur.")
+                .GreaterThanOrEqualTo(1)
+                .WithMessage("Birim fiyatı2 1 veya daha fazla olmalıdır.");
+
         }
     }
 }

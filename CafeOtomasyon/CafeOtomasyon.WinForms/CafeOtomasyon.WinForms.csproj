@@ -23,6 +23,7 @@
   <ItemGroup>
     <Folder Include="Masalar\" />
     <Folder Include="Kullanicilar\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
 
   <ItemGroup>

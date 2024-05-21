@@ -17,6 +17,7 @@ namespace CafeOtomasyon.Entity.Concrete
         public string UrunAdi { get; set; }
         public decimal BirimFiyati1 { get; set; }
         public decimal BirimFiyati2 { get; set; }
+        public decimal BirimFiyati3 { get; set; }
         public string Aciklama { get; set; }
         public DateTime Tarih { get; set; }
         public string Resim { get; set; }
