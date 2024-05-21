@@ -17,7 +17,7 @@ namespace CafeOtomasyon.Business.Concrete
 {
     public class MenuManager : IMenuService
     {
-        IMenuDal _menuDal;
+        private readonly IMenuDal _menuDal;
         public MenuManager(IMenuDal menuDal)
         {
             _menuDal = menuDal;

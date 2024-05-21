@@ -11,5 +11,6 @@ namespace CafeOtomasyon.DAL.Abstract
 {
     public interface IUrunDal : IEntityRepository<Urun>
     {
+        List<Urun> GetAllUrunWithMenu();
     }
 }

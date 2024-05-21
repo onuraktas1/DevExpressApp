@@ -37,6 +37,7 @@ namespace CafeOtomasyon.WinForms.AnaMenu
         {
             FrmMenuler frmMenuler = new();
             frmMenuler.ShowDialog();
+
         }
     }
 }
