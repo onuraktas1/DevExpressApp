@@ -4,6 +4,7 @@ using CafeOtomasyon.DAL.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CafeOtomasyon.DAL.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20240523142331_mig_9")]
+    partial class mig_9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -151,8 +154,6 @@ namespace CafeOtomasyon.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("KullaniciId");
 
                     b.ToTable("Masalar");
                 });
@@ -382,15 +383,6 @@ namespace CafeOtomasyon.DAL.Migrations
                         .HasForeignKey("KullaniciId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Kullanici");
-                });
-
-            modelBuilder.Entity("CafeOtomasyon.Entity.Concrete.Masa", b =>
-                {
-                    b.HasOne("CafeOtomasyon.Entity.Concrete.Kullanici", "Kullanici")
-                        .WithMany()
-                        .HasForeignKey("KullaniciId");
 
                     b.Navigation("Kullanici");
                 });

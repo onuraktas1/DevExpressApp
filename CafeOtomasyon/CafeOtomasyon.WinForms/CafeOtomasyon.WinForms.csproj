@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Masalar\" />
+    <Folder Include="bin\Debug\net8.0-windows\Images\" />
     <Folder Include="Kullanicilar\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>

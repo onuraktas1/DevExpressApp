@@ -16,6 +16,8 @@ namespace CafeOtomasyon.Entity.Concrete
         public bool RezerveMi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public DateTime SonIslemTarihi { get; set; }
+        public int? KullaniciId { get; set; }
+        public Kullanici Kullanici { get; set; }
         public ICollection<MasaHareketi> MasaHareketi { get; set; }
     }
 }

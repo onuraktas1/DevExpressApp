@@ -1,6 +1,7 @@
 ﻿using CafeOtomasyon.DAL.Abstract;
 using CafeOtomasyon.DAL.Repositories;
 using CafeOtomasyon.Entity.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

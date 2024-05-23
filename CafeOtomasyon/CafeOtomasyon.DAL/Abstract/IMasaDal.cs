@@ -11,5 +11,6 @@ namespace CafeOtomasyon.DAL.Abstract
 {
     public interface IMasaDal : IEntityRepository<Masa>
     {
+        List<Masa> GetAllMasaWithKullanici();
     }
 }

@@ -1,4 +1,5 @@
-﻿using CafeOtomasyon.WinForms.Menuler;
+﻿using CafeOtomasyon.WinForms.Masalar;
+using CafeOtomasyon.WinForms.Menuler;
 using CafeOtomasyon.WinForms.Urunler;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
@@ -38,6 +39,12 @@ namespace CafeOtomasyon.WinForms.AnaMenu
             FrmMenuler frmMenuler = new();
             frmMenuler.ShowDialog();
 
+        }
+
+        private void btnMasalar_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmMasalar frmMasalar = new();
+            FormGetir(frmMasalar);
         }
     }
 }

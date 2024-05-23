@@ -59,16 +59,13 @@
             // 
             // ribbon
             // 
-            ribbon.EmptyAreaImageOptions.ImagePadding = new Padding(35, 37, 35, 37);
             ribbon.ExpandCollapseItem.Id = 0;
             ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btnMasalar, btnMasaHareketi, btnMenuler, btnMenuHareketi, btnUrunler, barButtonItem1, btnUrunHareketi, btnKullanicilar, btnKullaniciHareketi, btnRoller, btnDoviz, btnYardim, btnHakkimizda });
             ribbon.Location = new Point(0, 0);
-            ribbon.Margin = new Padding(4, 4, 4, 4);
             ribbon.MaxItemId = 14;
             ribbon.Name = "ribbon";
-            ribbon.OptionsMenuMinWidth = 385;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage2, ribbonPage1 });
-            ribbon.Size = new Size(1020, 193);
+            ribbon.Size = new Size(874, 158);
             ribbon.StatusBar = ribbonStatusBar;
             // 
             // btnMasalar
@@ -78,6 +75,7 @@
             btnMasalar.ImageOptions.Image = (Image)resources.GetObject("btnMasalar.ImageOptions.Image");
             btnMasalar.ImageOptions.LargeImage = (Image)resources.GetObject("btnMasalar.ImageOptions.LargeImage");
             btnMasalar.Name = "btnMasalar";
+            btnMasalar.ItemClick += btnMasalar_ItemClick;
             // 
             // btnMasaHareketi
             // 
@@ -226,11 +224,10 @@
             // 
             // ribbonStatusBar
             // 
-            ribbonStatusBar.Location = new Point(0, 550);
-            ribbonStatusBar.Margin = new Padding(4, 4, 4, 4);
+            ribbonStatusBar.Location = new Point(0, 447);
             ribbonStatusBar.Name = "ribbonStatusBar";
             ribbonStatusBar.Ribbon = ribbon;
-            ribbonStatusBar.Size = new Size(1020, 30);
+            ribbonStatusBar.Size = new Size(874, 24);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -238,13 +235,12 @@
             // 
             // FrmAnaMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1020, 580);
+            ClientSize = new Size(874, 471);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             IsMdiContainer = true;
-            Margin = new Padding(4, 4, 4, 4);
             Name = "FrmAnaMenu";
             Ribbon = ribbon;
             StartPosition = FormStartPosition.CenterScreen;
