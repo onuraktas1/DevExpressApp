@@ -50,7 +50,7 @@ namespace CafeOtomasyon.WinForms.Urunler
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             UrunValidator urunValidate = new();
-            bool basariliMi = ValidatorTools.Validates(urunValidate, _urun, out string ErrorMessage);
+            bool basariliMi = ValidatorTools.Validates(urunValidate, _urun, out string errorMessage);
 
             if (basariliMi)
             {
@@ -70,7 +70,7 @@ namespace CafeOtomasyon.WinForms.Urunler
             }
             else
             {
-                MessageBox.Show(ErrorMessage);
+                MessageBox.Show(errorMessage);
             }
         }
     }

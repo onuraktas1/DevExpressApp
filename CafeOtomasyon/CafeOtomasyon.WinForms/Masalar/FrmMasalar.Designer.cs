@@ -109,6 +109,7 @@
             btnYenile.Size = new Size(113, 55);
             btnYenile.TabIndex = 0;
             btnYenile.Text = "Yenile";
+            btnYenile.Click += btnYenile_Click;
             // 
             // btnDuzenle
             // 
@@ -118,6 +119,7 @@
             btnDuzenle.Size = new Size(113, 55);
             btnDuzenle.TabIndex = 0;
             btnDuzenle.Text = "Düzenle";
+            btnDuzenle.Click += btnDuzenle_Click;
             // 
             // btnEkle
             // 
@@ -127,6 +129,7 @@
             btnEkle.Size = new Size(113, 55);
             btnEkle.TabIndex = 0;
             btnEkle.Text = "Ekle";
+            btnEkle.Click += btnEkle_Click;
             // 
             // gridControl1
             // 
