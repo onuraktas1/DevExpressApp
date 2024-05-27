@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMasaKaydet));
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            btnSil = new DevExpress.XtraEditors.SimpleButton();
             btnCikis = new DevExpress.XtraEditors.SimpleButton();
             btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             memoAciklama = new DevExpress.XtraEditors.MemoEdit();
@@ -61,8 +59,6 @@
             // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(btnKapat);
-            groupControl1.Controls.Add(btnSil);
             groupControl1.Controls.Add(btnCikis);
             groupControl1.Controls.Add(btnKaydet);
             groupControl1.Dock = DockStyle.Bottom;
@@ -72,30 +68,10 @@
             groupControl1.TabIndex = 4;
             groupControl1.Text = "İşlemler";
             // 
-            // btnKapat
-            // 
-            btnKapat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnKapat.ImageOptions.Image = (Image)resources.GetObject("btnKapat.ImageOptions.Image");
-            btnKapat.Location = new Point(1914, 33);
-            btnKapat.Name = "btnKapat";
-            btnKapat.Size = new Size(113, 55);
-            btnKapat.TabIndex = 0;
-            btnKapat.Text = "Kapat";
-            // 
-            // btnSil
-            // 
-            btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSil.ImageOptions.Image = (Image)resources.GetObject("btnSil.ImageOptions.Image");
-            btnSil.Location = new Point(1792, 33);
-            btnSil.Name = "btnSil";
-            btnSil.Size = new Size(113, 55);
-            btnSil.TabIndex = 0;
-            btnSil.Text = "Sil";
-            // 
             // btnCikis
             // 
             btnCikis.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCikis.ImageOptions.Image = (Image)resources.GetObject("btnCikis.ImageOptions.Image");
+            btnCikis.ImageOptions.Image = (Image)resources.GetObject("btnKapat.ImageOptions.Image");
             btnCikis.Location = new Point(305, 33);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(113, 55);
@@ -185,8 +161,6 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnCikis;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.MemoEdit memoAciklama;

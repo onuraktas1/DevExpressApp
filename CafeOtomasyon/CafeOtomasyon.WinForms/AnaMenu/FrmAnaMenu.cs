@@ -50,7 +50,6 @@ namespace CafeOtomasyon.WinForms.AnaMenu
 
         private void FrmAnaMenu_Load(object sender, EventArgs e)
         {
-
             FrmKullaniciGirisi frm = new();
             frm.ShowDialog();
         }

@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUrunKaydet));
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            btnKapat = new DevExpress.XtraEditors.SimpleButton();
             btnSil = new DevExpress.XtraEditors.SimpleButton();
-            btnYenile = new DevExpress.XtraEditors.SimpleButton();
             btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -53,6 +51,7 @@
             dateTarih = new DevExpress.XtraEditors.DateEdit();
             pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             lookUpMenu = new DevExpress.XtraEditors.LookUpEdit();
+            btnKapat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtUrunKodu.Properties).BeginInit();
@@ -77,52 +76,31 @@
             labelControl1.Dock = DockStyle.Top;
             labelControl1.Location = new Point(0, 0);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(658, 69);
+            labelControl1.Size = new Size(704, 69);
             labelControl1.TabIndex = 2;
             labelControl1.Text = "Ürün Kayıt";
             // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(btnKapat);
             groupControl1.Controls.Add(btnSil);
-            groupControl1.Controls.Add(btnYenile);
+            groupControl1.Controls.Add(btnKapat);
             groupControl1.Controls.Add(btnKaydet);
             groupControl1.Dock = DockStyle.Bottom;
             groupControl1.Location = new Point(0, 473);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(658, 100);
+            groupControl1.Size = new Size(704, 100);
             groupControl1.TabIndex = 3;
             groupControl1.Text = "İşlemler";
-            // 
-            // btnKapat
-            // 
-            btnKapat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnKapat.ImageOptions.Image = (Image)resources.GetObject("btnKapat.ImageOptions.Image");
-            btnKapat.Location = new Point(1258, 33);
-            btnKapat.Name = "btnKapat";
-            btnKapat.Size = new Size(113, 55);
-            btnKapat.TabIndex = 0;
-            btnKapat.Text = "Kapat";
             // 
             // btnSil
             // 
             btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSil.ImageOptions.Image = (Image)resources.GetObject("btnSil.ImageOptions.Image");
-            btnSil.Location = new Point(1136, 33);
+            btnSil.Location = new Point(1182, 33);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(113, 55);
             btnSil.TabIndex = 0;
             btnSil.Text = "Sil";
-            // 
-            // btnYenile
-            // 
-            btnYenile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnYenile.ImageOptions.Image = (Image)resources.GetObject("btnYenile.ImageOptions.Image");
-            btnYenile.Location = new Point(533, 33);
-            btnYenile.Name = "btnYenile";
-            btnYenile.Size = new Size(113, 55);
-            btnYenile.TabIndex = 11;
-            btnYenile.Text = "Kapat";
             // 
             // btnKaydet
             // 
@@ -369,11 +347,22 @@
             lookUpMenu.Size = new Size(246, 22);
             lookUpMenu.TabIndex = 1;
             // 
+            // btnKapat
+            // 
+            btnKapat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnKapat.ImageOptions.Image = (Image)resources.GetObject("btnYenile.ImageOptions.Image");
+            btnKapat.Location = new Point(579, 33);
+            btnKapat.Name = "btnKapat";
+            btnKapat.Size = new Size(113, 55);
+            btnKapat.TabIndex = 11;
+            btnKapat.Text = "Kapat";
+            btnKapat.Click += btnKapat_Click;
+            // 
             // FrmUrunKaydet
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(658, 573);
+            ClientSize = new Size(704, 573);
             Controls.Add(lookUpMenu);
             Controls.Add(pictureEdit1);
             Controls.Add(dateTarih);
@@ -417,9 +406,7 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnSil;
-        private DevExpress.XtraEditors.SimpleButton btnYenile;
         private DevExpress.XtraEditors.SimpleButton btnDuzenle;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -440,5 +427,6 @@
         private DevExpress.XtraEditors.DateEdit dateTarih;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LookUpEdit lookUpMenu;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
     }
 }

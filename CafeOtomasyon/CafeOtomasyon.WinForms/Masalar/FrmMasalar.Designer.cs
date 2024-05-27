@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMasalar));
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            btnSil = new DevExpress.XtraEditors.SimpleButton();
             btnDurumDegistir = new DevExpress.XtraEditors.SimpleButton();
             btnRezerveDegistir = new DevExpress.XtraEditors.SimpleButton();
             btnSilme = new DevExpress.XtraEditors.SimpleButton();
@@ -73,8 +71,6 @@
             // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(btnKapat);
-            groupControl1.Controls.Add(btnSil);
             groupControl1.Controls.Add(btnDurumDegistir);
             groupControl1.Controls.Add(btnRezerveDegistir);
             groupControl1.Controls.Add(btnSilme);
@@ -88,26 +84,6 @@
             groupControl1.Size = new Size(1172, 100);
             groupControl1.TabIndex = 3;
             groupControl1.Text = "İşlemler";
-            // 
-            // btnKapat
-            // 
-            btnKapat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnKapat.ImageOptions.Image = (Image)resources.GetObject("btnKapat.ImageOptions.Image");
-            btnKapat.Location = new Point(1766, 33);
-            btnKapat.Name = "btnKapat";
-            btnKapat.Size = new Size(113, 55);
-            btnKapat.TabIndex = 0;
-            btnKapat.Text = "Kapat";
-            // 
-            // btnSil
-            // 
-            btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSil.ImageOptions.Image = (Image)resources.GetObject("btnSil.ImageOptions.Image");
-            btnSil.Location = new Point(1644, 33);
-            btnSil.Name = "btnSil";
-            btnSil.Size = new Size(113, 55);
-            btnSil.TabIndex = 0;
-            btnSil.Text = "Sil";
             // 
             // btnDurumDegistir
             // 
@@ -302,8 +278,6 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnYenile;
         private DevExpress.XtraEditors.SimpleButton btnDuzenle;
         private DevExpress.XtraEditors.SimpleButton btnEkle;

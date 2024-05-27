@@ -73,5 +73,10 @@ namespace CafeOtomasyon.WinForms.Urunler
                 MessageBox.Show(errorMessage);
             }
         }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

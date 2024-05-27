@@ -37,7 +37,7 @@
             btnGirisYap = new DevExpress.XtraEditors.SimpleButton();
             txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
             txtParola = new DevExpress.XtraEditors.TextEdit();
-            hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            lblKayitOl = new DevExpress.XtraEditors.HyperlinkLabelControl();
             checkBeniHatirla = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)pictureEdit1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
@@ -106,6 +106,7 @@
             btnSifremiUnuttum.Size = new Size(134, 55);
             btnSifremiUnuttum.TabIndex = 0;
             btnSifremiUnuttum.Text = "Şifremi unuttum";
+            btnSifremiUnuttum.Click += btnSifremiUnuttum_Click;
             // 
             // btnGirisYap
             // 
@@ -142,15 +143,16 @@
             txtParola.Size = new Size(438, 22);
             txtParola.TabIndex = 6;
             // 
-            // hyperlinkLabelControl1
+            // lblKayitOl
             // 
-            hyperlinkLabelControl1.Appearance.Font = new Font("Tahoma", 10F);
-            hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            hyperlinkLabelControl1.Location = new Point(720, 245);
-            hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            hyperlinkLabelControl1.Size = new Size(43, 16);
-            hyperlinkLabelControl1.TabIndex = 7;
-            hyperlinkLabelControl1.Text = "Kayıt Ol";
+            lblKayitOl.Appearance.Font = new Font("Tahoma", 10F);
+            lblKayitOl.Appearance.Options.UseFont = true;
+            lblKayitOl.Location = new Point(720, 245);
+            lblKayitOl.Name = "lblKayitOl";
+            lblKayitOl.Size = new Size(43, 16);
+            lblKayitOl.TabIndex = 7;
+            lblKayitOl.Text = "Kayıt Ol";
+            lblKayitOl.Click += lblKayitOl_Click;
             // 
             // checkBeniHatirla
             // 
@@ -168,7 +170,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(781, 367);
             Controls.Add(checkBeniHatirla);
-            Controls.Add(hyperlinkLabelControl1);
+            Controls.Add(lblKayitOl);
             Controls.Add(txtParola);
             Controls.Add(txtKullaniciAdi);
             Controls.Add(groupControl1);
@@ -201,7 +203,7 @@
         private DevExpress.XtraEditors.SimpleButton btnGirisYap;
         private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
         private DevExpress.XtraEditors.TextEdit txtParola;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        private DevExpress.XtraEditors.HyperlinkLabelControl lblKayitOl;
         private DevExpress.XtraEditors.CheckEdit checkBeniHatirla;
     }
 }
