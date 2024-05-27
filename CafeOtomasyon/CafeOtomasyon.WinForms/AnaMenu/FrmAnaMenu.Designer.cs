@@ -247,6 +247,7 @@
             StatusBar = ribbonStatusBar;
             Text = "Cafe Otomasyon";
             WindowState = FormWindowState.Maximized;
+            Load += FrmAnaMenu_Load;
             ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
             ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).EndInit();
             ResumeLayout(false);

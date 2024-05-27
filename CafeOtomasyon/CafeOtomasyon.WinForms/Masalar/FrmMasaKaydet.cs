@@ -38,17 +38,18 @@ namespace CafeOtomasyon.WinForms.Masalar
 
             if (basariliMi)
             {
-                //_masa.Durum = false;
-                //_masa.RezerveMi = false;
-                _masa.EklenmeTarihi = DateTime.Now;
-                _masa.SonIslemTarihi = DateTime.Now;
 
                 if (_masa.Id != 0)
                 {
+                    _masa.SonIslemTarihi = DateTime.Now;
                     _masaManager.Update(_masa);
                 }
                 else
                 {
+                    _masa.EklenmeTarihi = DateTime.Now;
+                    _masa.SonIslemTarihi = DateTime.Now;
+                    _masa.Durum = false;
+                    _masa.RezerveMi = false;
                     _masaManager.Add(_masa);
                 }
                 this.Close();

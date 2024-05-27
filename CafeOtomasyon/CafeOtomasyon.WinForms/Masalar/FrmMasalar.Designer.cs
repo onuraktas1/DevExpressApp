@@ -33,6 +33,10 @@
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             btnKapat = new DevExpress.XtraEditors.SimpleButton();
             btnSil = new DevExpress.XtraEditors.SimpleButton();
+            btnDurumDegistir = new DevExpress.XtraEditors.SimpleButton();
+            btnRezerveDegistir = new DevExpress.XtraEditors.SimpleButton();
+            btnSilme = new DevExpress.XtraEditors.SimpleButton();
+            btnCik = new DevExpress.XtraEditors.SimpleButton();
             btnYenile = new DevExpress.XtraEditors.SimpleButton();
             btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             btnEkle = new DevExpress.XtraEditors.SimpleButton();
@@ -63,7 +67,7 @@
             labelControl1.Dock = DockStyle.Top;
             labelControl1.Location = new Point(0, 0);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(1090, 69);
+            labelControl1.Size = new Size(1172, 69);
             labelControl1.TabIndex = 2;
             labelControl1.Text = "Masalar";
             // 
@@ -71,13 +75,17 @@
             // 
             groupControl1.Controls.Add(btnKapat);
             groupControl1.Controls.Add(btnSil);
+            groupControl1.Controls.Add(btnDurumDegistir);
+            groupControl1.Controls.Add(btnRezerveDegistir);
+            groupControl1.Controls.Add(btnSilme);
+            groupControl1.Controls.Add(btnCik);
             groupControl1.Controls.Add(btnYenile);
             groupControl1.Controls.Add(btnDuzenle);
             groupControl1.Controls.Add(btnEkle);
             groupControl1.Dock = DockStyle.Bottom;
             groupControl1.Location = new Point(0, 583);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(1090, 100);
+            groupControl1.Size = new Size(1172, 100);
             groupControl1.TabIndex = 3;
             groupControl1.Text = "İşlemler";
             // 
@@ -85,7 +93,7 @@
             // 
             btnKapat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnKapat.ImageOptions.Image = (Image)resources.GetObject("btnKapat.ImageOptions.Image");
-            btnKapat.Location = new Point(1684, 33);
+            btnKapat.Location = new Point(1766, 33);
             btnKapat.Name = "btnKapat";
             btnKapat.Size = new Size(113, 55);
             btnKapat.TabIndex = 0;
@@ -95,11 +103,55 @@
             // 
             btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSil.ImageOptions.Image = (Image)resources.GetObject("btnSil.ImageOptions.Image");
-            btnSil.Location = new Point(1562, 33);
+            btnSil.Location = new Point(1644, 33);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(113, 55);
             btnSil.TabIndex = 0;
             btnSil.Text = "Sil";
+            // 
+            // btnDurumDegistir
+            // 
+            btnDurumDegistir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnDurumDegistir.ImageOptions.Image = (Image)resources.GetObject("btnDurumDegistir.ImageOptions.Image");
+            btnDurumDegistir.Location = new Point(657, 33);
+            btnDurumDegistir.Name = "btnDurumDegistir";
+            btnDurumDegistir.Size = new Size(119, 55);
+            btnDurumDegistir.TabIndex = 0;
+            btnDurumDegistir.Text = "Durum Değiştir";
+            btnDurumDegistir.Click += btnDurumDegistir_Click;
+            // 
+            // btnRezerveDegistir
+            // 
+            btnRezerveDegistir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRezerveDegistir.ImageOptions.Image = (Image)resources.GetObject("btnRezerveDegistir.ImageOptions.Image");
+            btnRezerveDegistir.Location = new Point(782, 33);
+            btnRezerveDegistir.Name = "btnRezerveDegistir";
+            btnRezerveDegistir.Size = new Size(122, 55);
+            btnRezerveDegistir.TabIndex = 0;
+            btnRezerveDegistir.Text = "Rezerve Değiştir";
+            btnRezerveDegistir.Click += btnRezerveDegistir_Click;
+            // 
+            // btnSilme
+            // 
+            btnSilme.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSilme.ImageOptions.Image = (Image)resources.GetObject("btnSilme.ImageOptions.Image");
+            btnSilme.Location = new Point(910, 33);
+            btnSilme.Name = "btnSilme";
+            btnSilme.Size = new Size(119, 55);
+            btnSilme.TabIndex = 0;
+            btnSilme.Text = "Sil";
+            btnSilme.Click += btnSilme_Click;
+            // 
+            // btnCik
+            // 
+            btnCik.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCik.ImageOptions.Image = (Image)resources.GetObject("btnCik.ImageOptions.Image");
+            btnCik.Location = new Point(1035, 33);
+            btnCik.Name = "btnCik";
+            btnCik.Size = new Size(119, 55);
+            btnCik.TabIndex = 0;
+            btnCik.Text = "Kapat";
+            btnCik.Click += btnCik_Click;
             // 
             // btnYenile
             // 
@@ -137,7 +189,7 @@
             gridControl1.Location = new Point(0, 69);
             gridControl1.MainView = gridView1;
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new Size(1090, 514);
+            gridControl1.Size = new Size(1172, 514);
             gridControl1.TabIndex = 4;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
@@ -232,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1090, 683);
+            ClientSize = new Size(1172, 683);
             Controls.Add(gridControl1);
             Controls.Add(groupControl1);
             Controls.Add(labelControl1);
@@ -266,5 +318,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn SonIslemTarihi;
         private DevExpress.XtraGrid.Columns.GridColumn KullaniciAdSoyad;
         private DevExpress.XtraGrid.Columns.GridColumn MasaHareketi;
+        private DevExpress.XtraEditors.SimpleButton btnDurumDegistir;
+        private DevExpress.XtraEditors.SimpleButton btnRezerveDegistir;
+        private DevExpress.XtraEditors.SimpleButton btnCik;
+        private DevExpress.XtraEditors.SimpleButton btnSilme;
     }
 }

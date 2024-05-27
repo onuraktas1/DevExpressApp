@@ -32,7 +32,10 @@ namespace CafeOtomasyon.WinForms.Masalar
 
         private void Listele()
         {
+            gridControl1.DataSource = null;
             gridControl1.DataSource = _masaManager.GetAllMasaWithKullanici();
+            gridView1.RefreshData();
+            gridControl1.RefreshDataSource();
         }
 
         private void btnYenile_Click(object sender, EventArgs e)
@@ -47,6 +50,53 @@ namespace CafeOtomasyon.WinForms.Masalar
             FrmMasaKaydet frm = new(masa);
             frm.ShowDialog();
             Listele();
+        }
+
+        private void btnSilme_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue(Id));
+
+            bool silinsinMi = MessageBox.Show(
+                text: "Seçili olan masa silinsin mi ?",
+                caption: "Uyarı", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes;
+
+            if (silinsinMi)
+            {
+                _masaManager.Delete(x => x.Id == id);
+                Listele();
+            }
+        }
+
+        private void btnDurumDegistir_Click(object sender, EventArgs e)
+        {
+            if (gridView1.SelectedRowsCount > 0)
+            {
+                int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue(Id));
+                Masa masa = _masaManager.GetByFilter(m => m.Id == id);
+                masa.Durum = !masa.Durum;
+                _masaManager.Save();
+                Listele();
+            }
+
+        }
+
+        private void btnRezerveDegistir_Click(object sender, EventArgs e)
+        {
+
+            if (gridView1.SelectedRowsCount > 0)
+            {
+                int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue(Id));
+                Masa masa = _masaManager.GetByFilter(m => m.Id == id);
+                masa.RezerveMi = !masa.RezerveMi;
+                _masaManager.Save();
+                Listele();
+            }
+        }
+
+        private void btnCik_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace CafeOtomasyon.DAL.Concrete.EntityFramework
         private readonly Context _context = new();
         public List<Masa> GetAllMasaWithKullanici()
         {
-            return _context.Masalar.Include(k => k.Kullanici).ToList();
+            return _context.Masalar.Include(k => k.Kullanici).AsNoTracking().ToList();
         }
     }
 }

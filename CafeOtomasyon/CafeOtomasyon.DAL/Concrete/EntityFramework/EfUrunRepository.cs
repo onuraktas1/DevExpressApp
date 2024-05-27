@@ -15,7 +15,7 @@ namespace CafeOtomasyon.DAL.Concrete.EntityFramework
         private readonly Context _context = new();
         public List<Urun> GetAllUrunWithMenu()
         {
-            return _context.Urunler.Include(u => u.Menu).ToList();
+            return _context.Urunler.Include(u => u.Menu).AsNoTracking().ToList();
         }
     }
 }

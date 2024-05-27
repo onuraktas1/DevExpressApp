@@ -1,4 +1,5 @@
-﻿using CafeOtomasyon.WinForms.Masalar;
+﻿using CafeOtomasyon.WinForms.Kullanicilar;
+using CafeOtomasyon.WinForms.Masalar;
 using CafeOtomasyon.WinForms.Menuler;
 using CafeOtomasyon.WinForms.Urunler;
 using DevExpress.XtraBars;
@@ -45,6 +46,13 @@ namespace CafeOtomasyon.WinForms.AnaMenu
         {
             FrmMasalar frmMasalar = new();
             FormGetir(frmMasalar);
+        }
+
+        private void FrmAnaMenu_Load(object sender, EventArgs e)
+        {
+
+            FrmKullaniciGirisi frm = new();
+            frm.ShowDialog();
         }
     }
 }
