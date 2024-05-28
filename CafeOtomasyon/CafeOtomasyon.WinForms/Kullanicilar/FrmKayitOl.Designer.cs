@@ -56,7 +56,7 @@
             txtCevap = new DevExpress.XtraEditors.TextEdit();
             labelControl13 = new DevExpress.XtraEditors.LabelControl();
             memoAciklama = new DevExpress.XtraEditors.MemoEdit();
-            toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
+            toggleDurumu = new DevExpress.XtraEditors.ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtAdSoyad.Properties).BeginInit();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)txtSoru.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtCevap.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memoAciklama.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)toggleSwitch1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)toggleDurumu.Properties).BeginInit();
             SuspendLayout();
             // 
             // labelControl1
@@ -391,21 +391,21 @@
             memoAciklama.Size = new Size(263, 83);
             memoAciklama.TabIndex = 13;
             // 
-            // toggleSwitch1
+            // toggleDurumu
             // 
-            toggleSwitch1.Location = new Point(150, 86);
-            toggleSwitch1.Name = "toggleSwitch1";
-            toggleSwitch1.Properties.OffText = "Pasif";
-            toggleSwitch1.Properties.OnText = "Aktif";
-            toggleSwitch1.Size = new Size(95, 18);
-            toggleSwitch1.TabIndex = 14;
+            toggleDurumu.Location = new Point(150, 86);
+            toggleDurumu.Name = "toggleDurumu";
+            toggleDurumu.Properties.OffText = "Pasif";
+            toggleDurumu.Properties.OnText = "Aktif";
+            toggleDurumu.Size = new Size(95, 18);
+            toggleDurumu.TabIndex = 14;
             // 
             // FrmKayitOl
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(434, 736);
-            Controls.Add(toggleSwitch1);
+            Controls.Add(toggleDurumu);
             Controls.Add(memoAciklama);
             Controls.Add(memoAdres);
             Controls.Add(txtCevap);
@@ -446,7 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)txtSoru.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtCevap.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)memoAciklama.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)toggleSwitch1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)toggleDurumu.Properties).EndInit();
             ResumeLayout(false);
         }
 
@@ -479,6 +479,6 @@
         private DevExpress.XtraEditors.TextEdit txtCevap;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.MemoEdit memoAciklama;
-        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
+        private DevExpress.XtraEditors.ToggleSwitch toggleDurumu;
     }
 }
