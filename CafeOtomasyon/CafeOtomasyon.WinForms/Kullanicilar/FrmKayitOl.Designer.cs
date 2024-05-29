@@ -295,6 +295,7 @@
             txtParola.Name = "txtParola";
             txtParola.Properties.Appearance.Font = new Font("Microsoft Sans Serif", 9.75F);
             txtParola.Properties.Appearance.Options.UseFont = true;
+            txtParola.Properties.UseSystemPasswordChar = true;
             txtParola.Size = new Size(264, 22);
             txtParola.TabIndex = 11;
             // 
@@ -319,6 +320,7 @@
             txtParolaTekrar.Name = "txtParolaTekrar";
             txtParolaTekrar.Properties.Appearance.Font = new Font("Microsoft Sans Serif", 9.75F);
             txtParolaTekrar.Properties.Appearance.Options.UseFont = true;
+            txtParolaTekrar.Properties.UseSystemPasswordChar = true;
             txtParolaTekrar.Size = new Size(264, 22);
             txtParolaTekrar.TabIndex = 11;
             // 

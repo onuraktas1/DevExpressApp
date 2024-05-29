@@ -49,8 +49,15 @@ namespace CafeOtomasyon.WinForms.Kullanicilar
 
             if (dogrulandiMi)
             {
-                _kullaniciManager.Add(_kullanici);
-                MessageBox.Show("Yeni kullanıcı başarıyla eklendi");
+                if (txtParola.Text == txtParolaTekrar.Text)
+                {
+                    _kullaniciManager.Add(_kullanici);
+                    MessageBox.Show("Yeni kullanıcı başarıyla eklendi");
+                }
+                else
+                {
+                    MessageBox.Show("Girilen parolalar eşit değil");
+                }
             }
             else
             {
