@@ -53,19 +53,23 @@
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(components);
+            btnMasaSiparis = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).BeginInit();
             SuspendLayout();
             // 
             // ribbon
             // 
+            ribbon.EmptyAreaImageOptions.ImagePadding = new Padding(35, 37, 35, 37);
             ribbon.ExpandCollapseItem.Id = 0;
-            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btnMasalar, btnMasaHareketi, btnMenuler, btnMenuHareketi, btnUrunler, barButtonItem1, btnUrunHareketi, btnKullanicilar, btnKullaniciHareketi, btnRoller, btnDoviz, btnYardim, btnHakkimizda });
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btnMasalar, btnMasaHareketi, btnMenuler, btnMenuHareketi, btnUrunler, barButtonItem1, btnUrunHareketi, btnKullanicilar, btnKullaniciHareketi, btnRoller, btnDoviz, btnYardim, btnHakkimizda, btnMasaSiparis });
             ribbon.Location = new Point(0, 0);
-            ribbon.MaxItemId = 14;
+            ribbon.Margin = new Padding(4, 4, 4, 4);
+            ribbon.MaxItemId = 15;
             ribbon.Name = "ribbon";
+            ribbon.OptionsMenuMinWidth = 385;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage2, ribbonPage1 });
-            ribbon.Size = new Size(874, 158);
+            ribbon.Size = new Size(1061, 193);
             ribbon.StatusBar = ribbonStatusBar;
             // 
             // btnMasalar
@@ -183,6 +187,7 @@
             // 
             ribbonPageGroup2.ItemLinks.Add(btnMasalar);
             ribbonPageGroup2.ItemLinks.Add(btnMasaHareketi);
+            ribbonPageGroup2.ItemLinks.Add(btnMasaSiparis);
             ribbonPageGroup2.Name = "ribbonPageGroup2";
             ribbonPageGroup2.Text = "Masalar";
             // 
@@ -224,23 +229,33 @@
             // 
             // ribbonStatusBar
             // 
-            ribbonStatusBar.Location = new Point(0, 447);
+            ribbonStatusBar.Location = new Point(0, 550);
+            ribbonStatusBar.Margin = new Padding(4, 4, 4, 4);
             ribbonStatusBar.Name = "ribbonStatusBar";
             ribbonStatusBar.Ribbon = ribbon;
-            ribbonStatusBar.Size = new Size(874, 24);
+            ribbonStatusBar.Size = new Size(1061, 30);
             // 
             // xtraTabbedMdiManager1
             // 
             xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // btnMasaSiparis
+            // 
+            btnMasaSiparis.Caption = "Masa Siparişleri";
+            btnMasaSiparis.Id = 14;
+            btnMasaSiparis.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnMasaSiparis.ImageOptions.SvgImage");
+            btnMasaSiparis.Name = "btnMasaSiparis";
+            btnMasaSiparis.ItemClick += btnMasaSiparis_ItemClick;
+            // 
             // FrmAnaMenu
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(874, 471);
+            ClientSize = new Size(1061, 580);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             IsMdiContainer = true;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FrmAnaMenu";
             Ribbon = ribbon;
             StartPosition = FormStartPosition.CenterScreen;
@@ -279,5 +294,6 @@
         private DevExpress.XtraBars.BarButtonItem btnYardim;
         private DevExpress.XtraBars.BarButtonItem btnHakkimizda;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnMasaSiparis;
     }
 }

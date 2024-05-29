@@ -53,5 +53,11 @@ namespace CafeOtomasyon.WinForms.AnaMenu
             FrmKullaniciGirisi frm = new();
             frm.ShowDialog();
         }
+
+        private void btnMasaSiparis_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmMasaDurumları frm = new();
+            FormGetir(frm);
+        }
     }
 }

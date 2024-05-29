@@ -20,6 +20,8 @@ namespace CafeOtomasyon.WinForms.Kullanicilar
     {
         private readonly KullaniciManager _kullaniciManager = new(new EfKullaniciRepository());
         private Kullanici _kullanici = new();
+        private readonly KullaniciHareketiManager _kullaniciHareketiManager = new(new EfKullaniciHareketiRepository());
+        private KullaniciHareketi _kulllaniciHareketi = new();
         public FrmKayitOl()
         {
             InitializeComponent();
@@ -52,6 +54,10 @@ namespace CafeOtomasyon.WinForms.Kullanicilar
                 if (txtParola.Text == txtParolaTekrar.Text)
                 {
                     _kullaniciManager.Add(_kullanici);
+                    _kulllaniciHareketi.KullaniciId = _kullanici.Id;
+                    _kulllaniciHareketi.Aciklama = $"{_kullanici.AdSoyad} kayıt oldu";
+                    _kulllaniciHareketi.Tarih = DateTime.Now;
+                    _kullaniciHareketiManager.Add(_kulllaniciHareketi);
                     MessageBox.Show("Yeni kullanıcı başarıyla eklendi");
                 }
                 else
