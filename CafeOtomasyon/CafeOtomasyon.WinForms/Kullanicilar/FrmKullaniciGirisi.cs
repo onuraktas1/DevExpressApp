@@ -17,9 +17,6 @@ namespace CafeOtomasyon.WinForms.Kullanicilar
     public partial class FrmKullaniciGirisi : DevExpress.XtraEditors.XtraForm
     {
         private readonly KullaniciManager _kullaniciManager = new(new EfKullaniciRepository());
-        private readonly KullaniciHareketiManager _kullaniciHareketiManager = new(new EfKullaniciHareketiRepository());
-        private KullaniciHareketi _kullaniciHareketi = new();
-
 
         void BilgileriGetir()
         {
@@ -85,10 +82,17 @@ namespace CafeOtomasyon.WinForms.Kullanicilar
             {
                 if (kullanici.Parola == txtParola.Text)
                 {
-                    _kullaniciHareketi.KullaniciId = kullanici.Id;
-                    _kullaniciHareketi.Tarih = DateTime.Now;
-                    _kullaniciHareketi.Aciklama = $"{kullanici.AdSoyad} isimli kullanıcı sisteme giriş yapmıştır";
-                    _kullaniciHareketiManager.Add(_kullaniciHareketi);
+                    //todo Uygulama bittiğinde açılacak
+                    //KullaniciHareketiManager kullaniciHareketiManager = new(new EfKullaniciHareketiRepository());
+                    //KullaniciHareketi kullaniciHareketi = new();
+
+
+                    //kullaniciHareketi.KullaniciId = kullanici.Id;
+                    //kullaniciHareketi.Tarih = DateTime.Now;
+                    //kullaniciHareketi.Aciklama = $"{kullanici.AdSoyad} isimli kullanıcı sisteme giriş yapmıştır";
+                    //kullaniciHareketiManager.Add(kullaniciHareketi);
+
+
                     BilgileriKaydet();
                     this.Close();
                 }

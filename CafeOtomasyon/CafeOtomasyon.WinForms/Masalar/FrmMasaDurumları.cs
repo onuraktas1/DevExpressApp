@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using CafeOtomasyon.WinForms.WinTools;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace CafeOtomasyon.WinForms.Masalar
         public FrmMasaDurumları()
         {
             InitializeComponent();
+            DinamikMasalar.MasalariGetir(flowLayoutPanel1);
         }
     }
 }
