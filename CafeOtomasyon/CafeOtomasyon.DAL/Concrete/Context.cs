@@ -25,6 +25,8 @@ namespace CafeOtomasyon.DAL.Concrete
         public DbSet<OdemeHareketi> OdemeHareketleri { get; set; }
         public DbSet<Rol> Roller { get; set; }
         public DbSet<Satis> Satislar { get; set; }
+        public DbSet<Musteri> Musteriler { get; set; }
+        public DbSet<SatisKodu> SatisKodlari { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +39,8 @@ namespace CafeOtomasyon.DAL.Concrete
             modelBuilder.ApplyConfiguration(new RolMap());
             modelBuilder.ApplyConfiguration(new SatisMap());
             modelBuilder.ApplyConfiguration(new UrunMap());
+            modelBuilder.ApplyConfiguration(new SatisKoduMap());
+            modelBuilder.ApplyConfiguration(new MusteriMap());
 
         }
     }
